@@ -1,0 +1,15 @@
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\bin\Debug\earthquake.exe.config
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\earthquake.csprojResolveAssemblyReference.cache
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\App.g.cs
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\earthquake_MarkupCompile.cache
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\earthquake_MarkupCompile.lref
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\bin\Debug\earthquake.exe
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\bin\Debug\earthquake.pdb
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\earthquake.g.resources
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\earthquake.Properties.Resources.resources
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\earthquake.csproj.GenerateResource.Cache
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\earthquake.exe
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\earthquake.pdb
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\MainWindow.g.cs
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\MainWindow.baml
+c:\users\todd\documents\visual studio 2015\Projects\earthquake\earthquake\obj\Debug\GeneratedInternalTypeHelper.g.cs

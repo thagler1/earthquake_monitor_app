@@ -1,0 +1,63 @@
+﻿<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:helpers="clr-namespace:earthquake.Helpers"
+        xmlns:vm="clr-namespace:earthquake.ViewModel"
+        x:Class="earthquake.ViewModel.MainWindow"
+        Title="Earthquake Monitor" Height="500" Width="600"
+        DataContext = "{DynamicResource ViewModelMain}">
+    <Window.Resources>
+        <vm:ViewModelMain x:Key="ViewModelMain"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.939*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="0" Grid.Row="0"  Header="Earthquakes in the last hour" HorizontalAlignment="Center" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+                <ScrollViewer  VerticalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Horizontal">
+                        <ListBox ItemsSource="{Binding EarthquakeRecords}" 
+                             SelectedItem ="{Binding SelectedEarthquake}"
+                             DisplayMemberPath="Title"
+                             HorizontalAlignment="Left"></ListBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </GroupBox>
+        
+        <TextBox Grid.Column="1" DataContext="{Binding SelectedEarthquake, UpdateSourceTrigger=PropertyChanged}"/>
+        <StackPanel Grid.Column="1">
+            <TextBlock  Text="Magnitude:"><Run Text="{Binding SelectedEarthquake.Mag}"/></TextBlock>
+            <TextBlock Grid.Column="2" Text="Url:"><Run Text="{Binding SelectedEarthquake.Url}"/><Hyperlink NavigateUri="{Binding SelectedEarthquake.Url}"></Hyperlink>
+            
+            
+            </TextBlock>
+            <ScrollViewer>
+                <ListBox Grid.Column="2" ItemsSource="{Binding SelectedEarthquake.pipes}" 
+                             DisplayMemberPath="assetName"
+                             HorizontalAlignment="Left" ></ListBox>
+            </ScrollViewer>
+        </StackPanel>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Coordinates: "><Run Text="{Binding SelectedEarthquake.Coords}"/></TextBlock>
+
+
+
+
+    </Grid>
+
+</Window>
