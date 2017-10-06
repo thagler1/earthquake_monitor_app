@@ -84,6 +84,24 @@ namespace earthquake.Model
             }
         }
 
+
+        string _time;
+        public string time
+        {
+            get
+            {
+                return _time;
+            }
+            set
+            {
+                if (_time != value)
+                {
+                    _time = value;
+                    RaisePropertyChanged("xtime");
+                }
+            }
+        }
+
         public List<pipes>pipes { get; set; }
 
 

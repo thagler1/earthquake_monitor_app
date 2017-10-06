@@ -27,6 +27,7 @@
                     <RowDefinition />
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                
 
                 </Grid.RowDefinitions>
                 <ScrollViewer  VerticalScrollBarVisibility="Auto">
@@ -39,20 +40,28 @@
                 </ScrollViewer>
             </Grid>
         </GroupBox>
-        
-        <TextBox Grid.Column="1" DataContext="{Binding SelectedEarthquake, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <TextBox Grid.Column="1" Grid.Row="0" DataContext="{Binding SelectedEarthquake, UpdateSourceTrigger=PropertyChanged}"/>
         <StackPanel Grid.Column="1">
-            <TextBlock  Text="Magnitude:"><Run Text="{Binding SelectedEarthquake.Mag}"/></TextBlock>
-            <TextBlock Grid.Column="2" Text="Url:"><Run Text="{Binding SelectedEarthquake.Url}"/><Hyperlink NavigateUri="{Binding SelectedEarthquake.Url}"></Hyperlink>
-            
-            
-            </TextBlock>
-            <ScrollViewer>
-                <ListBox Grid.Column="2" ItemsSource="{Binding SelectedEarthquake.pipes}" 
+            <TextBlock Margin="5 2" Text="Magnitude:"><Run Text="{Binding SelectedEarthquake.Mag}"/></TextBlock>
+            <TextBlock Margin="5 2" Grid.Column="2" Text="Url: "><Run Text="{Binding SelectedEarthquake.Url}"/><Hyperlink NavigateUri="{Binding SelectedEarthquake.Url}"></Hyperlink></TextBlock>
+            <TextBlock Margin="5 2" Grid.Column="2" Text="Time: "><Run Text="{Binding SelectedEarthquake.time}"/></TextBlock>
+           
+
+            <Grid>
+
+                <GroupBox Grid.Column="1" Grid.Row="1" Header="Effected Pipelines:">
+                    <ScrollViewer>
+                        <ListBox BorderThickness="0"  Grid.Column="2" ItemsSource="{Binding SelectedEarthquake.pipes}" 
                              DisplayMemberPath="assetName"
                              HorizontalAlignment="Left" ></ListBox>
-            </ScrollViewer>
+                    </ScrollViewer>
+                </GroupBox>
+            </Grid>
         </StackPanel>
+   
+        
+        
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Coordinates: "><Run Text="{Binding SelectedEarthquake.Coords}"/></TextBlock>
 
 
