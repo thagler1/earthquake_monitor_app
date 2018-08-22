@@ -21,5 +21,10 @@ pipeline {
         }
       }
     }
+    stage('Build EQ1') {
+      steps {
+        bat 'nuget restore earthquake_monitor_app.sln'
+      }
+    }
   }
 }
