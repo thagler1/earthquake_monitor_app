@@ -6,6 +6,7 @@ namespace earthquake.Model
     public class pipeline : INotifyPropertyChanged
     {
         string _name;
+        string _remove;
         public string Name
         {
             get
